@@ -1,11 +1,12 @@
 const solve = function (str, x) {	
 	if(/^[-+()x*\/\d\s]+$/.test(str)){
 		try {
-			return eval(str);
-		} catch (err) {	
-			alert('Ошибка синтаксиса');		
+			var calc = new Function('x', 'return ' + str + ';');
+			return calc(x);
+		} catch (err) {		
+			return 'Ошибка синтаксиса';	
 		}
 	} else {
-		alert('Недопустимые символы');
+		return 'Недопустимые символы';	
 	};
 };
