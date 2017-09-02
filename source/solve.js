@@ -6,7 +6,6 @@ const solve = function (str, x) {
 		} catch (err) {		
 			return 'Ошибка синтаксиса';	
 		}
-	} else {
-		return 'Недопустимые символы';	
 	};
+	return 'Недопустимые символы';	
 };
